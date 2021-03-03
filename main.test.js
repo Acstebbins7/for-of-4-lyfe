@@ -29,17 +29,60 @@ function countTrues(arr) {
 }
 
 
-function makeFriendly(arr) {
-  var uWuuu = 0;
-  for(i = 0; i < str.length; i++) {
-    if(str[i] === ".") {
-      str.replace('.', '!')
-    }
-  }
-  return uWuuu
+function makeFriendly(str) {
+  var Uwuu = str.split(".").join("!");
+  return Uwuu
 }
 
+function cubeAll(arr) {
+  var resultedIn = [];
+  for(i =0; i < arr.length; i++) {
+    resultedIn[i] = arr[i] * arr[i] * arr[i];
+  }
+  return resultedIn;
+}
 
+function addNoises(arr) {
+  var theone = [];
+  var animals = {};
+  animals = {
+    dogs: ['Fido', 'Rolph', 'Maisie'],
+    cats: ['Garfield', 'Heathcliff'],
+    dinos: ['Barnie', 'Sharp Tooth']
+  }
+  for(i = 0; i < arr.length; i++){
+    if(arr[i].includes(animals.dogs)){
+      theone.push(arr[i] + ' says "Woof!"')
+    }
+    if(arr[i].includes(animals.cats)){
+      theone.push(arr[i] + ' says "Meow!"')
+    }
+    if(arr[i].includes(animals.dinos)){
+      theone.push(arr[i] + ' says "ROWR"')
+    }
+    return theone
+  }
+
+  }
+
+  function womenOnly(arr) {
+    let gorls = []
+    for(var i of arr) {
+      if(i[i.length-1] === "F")
+      gorls.push(i)
+    }
+    return gorls
+  }
+  
+  function integersOnly(arr) {
+    let nums = []
+    for (const number of arr) {
+      if(Number.isInteger(number)) {
+        nums.push(number)
+      }
+    }
+    return nums
+  }
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
  *********************************/
